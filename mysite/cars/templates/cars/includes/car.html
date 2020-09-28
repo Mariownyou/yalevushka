@@ -1,0 +1,12 @@
+{% load car_extras %}
+
+<a href="{% url 'saw' car.pk %}" class="list-group-item list-group-item-action list-group-item-warning">
+    {% if car.is_visited is False %}
+        <h5>{{ car.mark }}</h5>
+        {% multiply car.rare '★' %}
+    {% else %}
+        <h5></h5><s>{{ car.mark }}</s></h5>
+        {% multiply car.rare '★' %}
+        {{ car.date }}
+    {% endif %}
+</a>

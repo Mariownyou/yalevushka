@@ -1,0 +1,11 @@
+<nav class='navbar navbar-light' style='background-color: #e3f2fd;'>
+    <a class='navbar-brand' href='#'><span style='color:red'>L</span>eva</a>
+    <nav class='my-2 my-md-0 mr-md-3'>
+        {% if user.username == 'leva' %}
+        <a class='p-2 text-dark' href='#'>Профиль: {{ user.username }}</a>
+        {% else %}
+        <a class='p-2 text-dark' href='show'>Машинки</a> |
+        <a class='p-2 text-dark' href='#'>Черепашка</a>
+        {% endif %}
+    </nav>
+</nav>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="list-group">
+                {% if user.username is 'leva' %}
+                    {% for car in cars %}
+                        {% include 'cars/includes/car.html' %}
+                    {% endfor %}
+                {% else %}
+                    {% for car in cars %}
+                        {% include 'cars/includes/car_users.html' %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}    
